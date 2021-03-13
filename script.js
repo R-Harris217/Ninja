@@ -1,9 +1,9 @@
 class Ninja {
-    constructor (ninjaName) {
+    constructor (ninjaName, health, speed = 3, strength = 3) {
         this.name = ninjaName;
-        this.health = 100;
-        this.speed = 3;
-        this.strength = 3;
+        this.health = health;
+        this.speed = speed;
+        this.strength = strength;
     }
     sayName (){ 
         console.log(`Konichiwa. My name is ${this.name}.`);
@@ -16,7 +16,7 @@ Speed=${this.speed} Strength=${this.strength} Health=${this.health}`);
         this.health += 10;
     }
 }
-const gaiden = new Ninja("Ninja Gaiden");
+const gaiden = new Ninja("Ninja Gaiden", 100);
 gaiden.sayName();
 gaiden.showStats();
 gaiden.drinkSake();
