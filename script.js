@@ -23,8 +23,8 @@ gaiden.drinkSake();
 gaiden.showStats();
 
 class Sensei extends Ninja {
-    constructor(wisdom) {
-        super("Jo Hayabusa", 200, 10, 10, wisdom = 10)
+    constructor(ninjaName, health, speed, strength, wisdom) {
+        super(ninjaName, 200, 10, 10, wisdom = 10)
         this.wisdom = wisdom;
     }
     speakWisdom(){
@@ -35,4 +35,3 @@ class Sensei extends Ninja {
 const jo = new Sensei("Jo Hayabusa")
 jo.speakWisdom();
 jo.showStats();
-console.log(jo);
