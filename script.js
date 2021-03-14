@@ -16,8 +16,23 @@ Speed=${this.speed} Strength=${this.strength} Health=${this.health}`);
         this.health += 10;
     }
 }
-const gaiden = new Ninja("Ninja Gaiden", 100);
+const gaiden = new Ninja("Ninja Gaiden", 1000);
 gaiden.sayName();
 gaiden.showStats();
 gaiden.drinkSake();
 gaiden.showStats();
+
+class Sensei extends Ninja {
+    constructor(wisdom) {
+        super("Jo Hayabusa", 200, 10, 10, wisdom = 10)
+        this.wisdom = wisdom;
+    }
+    speakWisdom(){
+        this.drinkSake();
+        console.log("The first priority to the ninja is to win without fighting.")
+    }
+}
+const jo = new Sensei("Jo Hayabusa")
+jo.speakWisdom();
+jo.showStats();
+console.log(jo);
